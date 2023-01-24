@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  background: #f7f5f5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game--container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 10px solid #ddd;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#game--container #restart {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background: #eee;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 10;
+  border-radius: 50%;
+  border: solid 10px #ddd;
+  cursor: pointer;
+  transition: background 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#game--container #restart:hover {
+  background: #999;
+}
+#game--container #restart #level {
+  font-size: 3.5em;
+  font-family: sans-serif;
+  color: #212121;
+}
+
+#game--container #game--items {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#game--container #game--items .item {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+#game--container #game--items .item.red {
+  background: #c23616b0;
+}
+#game--container #game--items .item.red.active {
+  background: #e84118;
+}
+
+#game--container #game--items .item.blue {
+  background: #40749eb1;
+}
+#game--container #game--items .item.blue.active {
+  background: #487eb0;
+}
+
+#game--container #game--items .item.green {
+  background: #44bd32b0;
+}
+#game--container #game--items .item.green.active {
+  background: #4cd137;
+}
+
+#game--container #game--items .item.yellow {
+  background: #e1b12cb0;
+}
+#game--container #game--items .item.yellow.active {
+  background: #fbc531;
+}
